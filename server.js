@@ -1,10 +1,12 @@
 
 const express = require('express');
 const { MongoClient } = require('mongodb');
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = 'mongodb://localhost:27017/mydatabase'; // Update with your MongoDB connection URI
+const MONGODB_URI = process.env.MONGO_URL; // Update with your MongoDB connection URI
 
 let collection; // Declare collection globally
 
