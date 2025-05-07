@@ -11,7 +11,7 @@ const MONGODB_URI = process.env.MONGO_URL; // Update with your MongoDB connectio
 let collection; // Declare collection globally
 
 // Connect to MongoDB
-MongoClient.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+MongoClient.connect(MONGODB_URI, {  })
   .then(client => {
     console.log('Connected to MongoDB');
     const db = client.db();
